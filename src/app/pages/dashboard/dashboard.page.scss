@@ -1,0 +1,51 @@
+.contenedor {
+    /* position: relative;
+    width: 100vw;
+    height: 100vh; */
+    overflow: hidden;
+  }
+  
+  .nube {
+    /* position: absolute; */
+    top: 50%; /* Ajusta según tus necesidades */
+    left: 100%; /* Inicia fuera del contenedor */
+    animation: moverNube 10s linear infinite; /* Ajusta la duración y el tipo de animación según tus necesidades */
+  }
+  
+  @keyframes moverNube {
+    to {
+      transform: translateX(-100%); /* Se mueve completamente hacia la izquierda */
+    }
+  }
+  .graph-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .graph {
+    text-align: center;
+    margin-right: 20px;
+  }
+  .alter{
+    margin-top: -2rem;
+  }
+  .graph-bar{
+border-radius: 
+1rem;
+  }
+  @media (max-width: 600px) {
+    .graph-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .graph {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .center{
+    margin: .5rem 0rem 0rem 0rem;
+    font-size: small;
+    text-align: center;
+  }

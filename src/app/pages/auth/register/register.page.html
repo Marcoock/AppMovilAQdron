@@ -1,0 +1,131 @@
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <img src="assets/icon/logoAQdron.png">
+      <h1>AQdron</h1>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <ion-card class="form-wrapper">
+      <ion-card-content>
+        <h4 class="mb-2">La aventura comienza aquí 🚀</h4>
+          <p class="mb-4"></p>
+
+        <form id="formAuthentication" class="mb-3" #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="usuario" allowPatterns="[0-9a-zA-Z]" ngModel
+                  name="usuario" placeholder="Ingresa tu usuario" autofocus />
+              </div>
+              <div class="col">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" allowPatterns="[a-zA-Záéíóú]" ngModel name="nombre"
+                  placeholder="ingresa tu nombre" autofocus />
+              </div>
+            </div>
+
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" allowPatterns="[0-9a-z.@]" ngModel name="correo"
+              placeholder="Ingresa tu correo electrónico" autofocus />
+          </div>
+
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="apelllido_p" class="form-label">Apellido Paterno</label>
+                <input type="text" class="form-control" id="apellido_p" allowPatterns="[A-Za-záéíóú]" ngModel
+                  name="apellido_p" placeholder="Apellido Paterno" autofocus />
+              </div>
+              <div class="col">
+                <label for="apelllido_m" class="form-label">Apello Materno</label>
+                <input type="text" class="form-control" id="apellido_m" allowPatterns="[A-Za-záéíóú]" ngModel
+                  name="apellido_m" placeholder="Apellido Materno" autofocus />
+              </div>
+            </div>
+          </div>
+          
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Telefóno</label>
+            <input type="text" class="form-control" id="telefono" allowPatterns="[0-9]" ngModel name="telefono"
+              placeholder="Ingresa tu telefóno" autofocus />
+          </div>
+
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="calle" class="form-label">Calle</label>
+                <input type="text" class="form-control" id="calle" allowPatterns="[0-9A-Za-záéíóú]" ngModel
+                  name="calle" placeholder="Ingresa tu calle" autofocus />
+              </div>
+              <div class="col">
+                <label for="colonia" class="form-label">Colonia</label>
+                <input type="colonia" class="form-control" id="colonia" allowPatterns="[A-Za-záéíóú]" ngModel
+                  name="colonia" placeholder="Ingresa tu colonia" autofocus />
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="numero_interno" class="form-label">Número Interno</label>
+                <input type="text" class="form-control" id="numero_interno" allowPatterns="[0-9]" ngModel
+                  name="numero_interno" placeholder="Ingresa tu número" autofocus />
+              </div>
+              <div class="col">
+                <label for="numero_externo" class="form-label">Número externo</label>
+                <input type="text" class="form-control" id="numero_externo" allowPatterns="[0-9]" ngModel
+                  name="numero_externo" placeholder="Ingresa tu número" autofocus />
+              </div>
+            </div>
+          </div><div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="ciudad" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="ciudad" allowPatterns="[A-Za-záéíóú]" ngModel
+                  name="ciudad" placeholder="Ciudad" autofocus />
+              </div>
+              <div class="col">
+                <label for="codigo_postal" class="form-label">Código postal</label>
+                <input type="text" class="form-control" id="codigo_postal" allowPatterns="[0-9]" ngModel
+                  name="codigo_postal" placeholder="Ingresa tu CP" autofocus />
+              </div>
+            </div>
+          </div>
+          <div class="mb-3 form-password-toggle">
+            <label class="form-label" for="password">Contraseña</label>
+            <div class="input-group input-group-merge">
+              <input type="password" id="contrasenia" class="form-control" ngModel name="contrasenia"
+                placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                aria-describedby="contrasenia" />
+              <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary d-grid w-100">Registrarse</button>
+        </form>
+
+        <p class="text-center">
+          <span>¿Ya tienes una cuenta?</span>
+          <a routerLink="/login">
+            <span> inicia sesión en su lugar</span>
+          </a>
+        </p>
+        
+        <!-- <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input [(ngModel)]="user.email" type="text" placeholder="Correo electrónico"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed"></ion-icon>
+          <ion-input [(ngModel)]="user.password" type="password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+        <ion-button (click)="signIn()" class="login-button" expand="block">Iniciar sesión</ion-button> -->
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

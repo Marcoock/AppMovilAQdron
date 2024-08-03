@@ -1,0 +1,149 @@
+ion-content {
+    background-color: #eaf1f1;
+
+    #header {
+        background: 
+                linear-gradient(rgba(64, 200, 231, 0.5), rgba(64, 200, 231, 0.5)), /* Degradado azul con 50% de transparencia */
+                url('/assets/contaminacion.jpg'); /* Reemplaza con la ruta de tu imagen */
+        background-size: cover;
+        background-position: center;
+        height: 13%;
+        // border-radius: 0 0 20px 20px;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding: 20px;
+
+
+        #app-bar {
+            // height: 20%;    
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            // flex-direction: column;
+
+        }
+
+        img{
+            width: 50px;
+            height: 50px;
+            filter: drop-shadow(0px 0px 9px #DDD)
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #e0dfe6;
+
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.4;
+        }
+    }
+
+    .wrapper {
+        position: absolute;
+        top: 10%;
+        left: -3%;
+        right: -3%;
+
+        .form-wrapper {
+            box-shadow: none;
+            border-radius: 20px;
+            padding: 15px 10px;
+            background-color: #eaf1f1;
+
+            ion-item {
+                --background: #efefef;
+                --padding-start: 10px;
+                --hightlight-height: 0;
+                --border-width: 0;
+                --padding-top: 0;
+                --min-height: 40px;
+                margin-bottom: 15px;
+                border-radius: 5px;
+
+                ion-icon {
+                    font-size: 18px;
+                }
+
+                ion-input {
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+            }
+
+            ion-button {
+                margin-top: 25px;
+            }
+        }
+
+        .line-text {
+            padding: 0 30px;
+            position: relative;
+            height: 20px;
+            margin-top: 30px;
+
+            .lines {
+                height: 1px;
+                background: #858585;
+                display: block;
+            }
+
+            .text {
+                position: absolute;
+                top: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #e0dfe6;
+                padding: 0 16px;
+                font-size: 12px;
+                font-weight: 500;
+                color: #5e5e5e;
+            }
+        }
+
+        .social-wrapper {
+            box-shadow: none;
+            border-radius: 20px;
+            background-color: #eaf1f1;
+
+            .socials {
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+
+                ionc-button{
+                    margin: 0 5px;
+                    --padding-start: 12px;
+                    --padding-end: 12px;
+                }
+
+                .btn-fb {
+                    --background: #567aa3;
+                }
+                .btn-tw {
+                    --background: #48cff5;
+                }
+                .btn-go {
+                    --background: #fd684f;
+                }
+                .btn-ph {
+                    --background: #737373;
+                }
+            }
+        }
+    }
+}
+
+.login-button {
+    --background: #3CCB6B; // Fondo verde
+    --border-radius: 7px; // Bordes redondeados
+    --color: white; // Color del texto negro
+    --border-width: 0; // Sin borde
+    --padding-top: 10px; // Padding superior
+    --padding-bottom: 10px; // Padding inferior
+  }
+  

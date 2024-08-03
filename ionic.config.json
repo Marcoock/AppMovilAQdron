@@ -1,0 +1,7 @@
+{
+  "name": "AQdron",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
