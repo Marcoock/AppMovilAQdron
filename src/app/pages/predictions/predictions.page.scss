@@ -1,0 +1,36 @@
+
+  .center{
+    margin: .5rem 0rem 0rem 0rem;
+    font-size: small;
+    text-align: center;
+  }
+  .form-control{
+    display: block;
+    width: 100%;
+    padding-left: 0.5rem !important;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.53;
+    color: #697a8d;
+    appearance: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #d9dee3;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  ion-item{
+    margin: 0.9rem;
+    width: 93%;
+  }
+  .form-label{
+    font-size: 1.5rem !important;
+    text-transform: uppercase;
+    letter-spacing: inherit;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #566a7f;
+    padding-bottom: 1rem;
+  }
+  

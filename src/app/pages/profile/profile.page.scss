@@ -1,0 +1,26 @@
+.text-title {
+    font-size: 1.75rem;
+    letter-spacing: -0.5px;
+    color: #566a7f;
+    font-weight: 700 !important;
+  }
+  .user-profile-header-banner img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.user-profile-header {
+    margin-top: -2rem;
+}
+.user-profile-header .user-profile-img {
+    border: 5px solid;
+    width: 120px;
+
+    border-color: #fff! important;
+
+}
+.circle{
+    border-radius: 4rem;
+}
+

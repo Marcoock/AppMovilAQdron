@@ -1,0 +1,207 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="text-title">AQdron</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" shape="round" size="large" id="click-loc">
+        <ion-icon name="location-outline"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="click-loc" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding">Yanga,Ver;</ion-content>
+        </ng-template>
+      </ion-popover>
+      <ion-button fill="clear" shape="round" size="large" id="click-cal">
+        <ion-icon name="calendar-outline"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="click-cal" triggerAction="click">
+        <ng-template>
+          <ion-content class="ion-padding">10/03/2024 00:00:00:0000</ion-content>
+        </ng-template>
+      </ion-popover>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<!-- Content wrapper -->
+<div class="content-wrapper">
+  <!-- Content -->
+  <div class="container-xxl flex-grow-1 container-p-y" *ngIf="user">
+
+      <!-- Header -->
+      <div class="row">
+          <div class="col-12">
+              <div class="card mb-4">
+                  <div class="user-profile-header-banner">
+                      <img src="../../assets/img/backgrounds/17.jpg" alt="Banner image"
+                          class="rounded-top">
+                  </div>
+                  <div
+                      class="user-profile-header d-flex flex-column flex-sm-row text-sm-start text-center mb-4">
+                      <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto">
+                          <img src="assets/img/avatars/1.png" alt="user image"
+                              class="d-block h-auto ms-0 ms-sm-4 circle user-profile-img">
+                      </div>
+                      <div class="flex-grow-1 mt-3 mt-sm-5">
+                          <div
+                              class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-4 flex-md-row flex-column gap-4">
+                              <div class="user-profile-info">
+                                  <h4>{{user.usuario}}</h4>
+                                  <ul
+                                      class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-2">
+                                      <!-- <li class="list-inline-item fw-medium">
+                                          <i class="bx bx-pen"></i> UX Designer
+                                      </li> -->
+                                      <li class="list-inline-item fw-medium">
+                                          <i class="bx bx-map"></i> {{user.ciudad}}
+                                      </li>
+                                      <!-- <li class="list-inline-item fw-medium">
+                                          <i class="bx bx-calendar-alt"></i> Joined April 2021
+                                      </li> -->
+                                  </ul>
+                              </div>
+                              <!-- <a href="javascript:void(0)" class="btn btn-primary text-nowrap">
+                                  <i class="bx bx-user-check me-1"></i>Connected
+                              </a> -->
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--/ Header -->
+
+      <!-- User Profile Content -->
+      <div class="row">
+          <div class="col-xl-4 col-lg-5 col-md-5">
+              <!-- About User -->
+              <div class="card mb-4">
+                  <div class="card-body">
+                      <small class="text-muted text-uppercase">Información</small>
+                      <ul class="list-unstyled mb-4 mt-3">
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-user"></i><span
+                                  class="fw-medium mx-2">Nombre:</span> <span>{{user.nombre}} {{user.apellido_p}} {{user.apellido_m}}</span></li>
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-check"></i><span
+                                  class="fw-medium mx-2">Estado:</span> <span>Activo</span></li>
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-flag"></i><span
+                                  class="fw-medium mx-2">Ciudad:</span> <span>{{user.ciudad}}</span></li>
+                      </ul>
+                      <small class="text-muted text-uppercase">Contacto</small>
+                      <ul class="list-unstyled mb-4 mt-3">
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-phone"></i><span
+                                  class="fw-medium mx-2">Telefóno:</span> <span>{{user.telefono}}</span></li>
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-envelope"></i><span
+                                  class="fw-medium mx-2">Correo:</span> <span>{{user.correo}}</span>
+                          </li>
+                      </ul>
+                      <small class="text-muted text-uppercase">Dirección</small>
+                      <ul class="list-unstyled mt-3 mb-0">
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-star"></i><span
+                              class="fw-medium mx-2">Calle:</span> <span>{{user.calle}}</span></li>
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-star"></i><span
+                              class="fw-medium mx-2">Colonia:</span> <span>{{user.colonia}}</span></li>
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-star"></i><span
+                              class="fw-medium mx-2">Número Exterior:</span> <span>{{user.numero_exterior}}</span></li>
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-star"></i><span
+                              class="fw-medium mx-2">Número Interno:</span> <span>{{user.numero_interior}}</span></li>
+                      </ul>
+                  </div>
+              </div>
+              <!--/ About User -->
+              <!-- Profile Overview -->
+              <!-- <div class="card mb-4">
+                  <div class="card-body">
+                      <small class="text-muted text-uppercase">Overview</small>
+                      <ul class="list-unstyled mt-3 mb-0">
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-check"></i><span
+                                  class="fw-medium mx-2">Task Compiled:</span> <span>13.5k</span></li>
+                          <li class="d-flex align-items-center mb-3"><i class="bx bx-customize"></i><span
+                                  class="fw-medium mx-2">Projects Compiled:</span> <span>146</span></li>
+                          <li class="d-flex align-items-center"><i class="bx bx-user"></i><span
+                                  class="fw-medium mx-2">Connections:</span> <span>897</span></li>
+                      </ul>
+                  </div>
+              </div> -->
+              <!--/ Profile Overview -->
+          </div>
+          <div class="col-xl-8 col-lg-7 col-md-7">
+              <!-- Projects table -->
+              <div class="card mb-4">
+                  <h5 class="card-header">Historial de predicciones</h5>
+                  <div class="table-responsive mb-3">
+                      <table _ngcontent-ng-c2421930281="" class="table">
+                          <thead _ngcontent-ng-c2421930281="">
+                              <tr _ngcontent-ng-c2421930281="">
+                                  <th _ngcontent-ng-c2421930281="">Contaminante</th>
+                                  <th _ngcontent-ng-c2421930281="">Fecha Relizada</th>
+                                  <th _ngcontent-ng-c2421930281="">Tiempo estimado</th>
+                                  <th _ngcontent-ng-c2421930281="">Valor</th>
+                              </tr>
+                          </thead>
+                          <tbody _ngcontent-ng-c2421930281="" class="table-border-bottom-0">
+                              <tr _ngcontent-ng-c2421930281="">
+                                  <td _ngcontent-ng-c2421930281="">
+                                      <ul class="list-unstyled users-list m-0 d-flex align-items-center">
+                                          <li>
+                                            <img src="../../assets/img/illustrations/logoSinMarca.png" alt="Avatar" height="20">
+                                          </li>
+                                          <li style="margin-left:1rem">
+                                            <span class="fw-medium">
+                                              CO2
+                                            </span>
+                                          </li>
+                                        </ul>
+                                  </td>
+                                  <td _ngcontent-ng-c2421930281=""> 23/09/2021 </td>
+                                  <td _ngcontent-ng-c2421930281=""> 6 meses </td>
+                                  <td _ngcontent-ng-c2421930281=""> 10ppm </td>
+                                  
+                              </tr>
+                              
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+              <!--/ Projects table -->
+          </div>
+      </div>
+      <!--/ User Profile Content -->
+
+  </div>
+  <!-- / Content -->
+
+  <!-- Footer -->
+  <footer class="content-footer footer bg-footer-theme">
+      <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+          <div class="mb-2 mb-md-0">
+              ©
+              <script>
+                  document.write(new Date().getFullYear());
+              </script>
+              , made with ❤️ by
+              <a href="https://themeselection.com" target="_blank"
+                  class="footer-link fw-medium">ThemeSelection</a>
+          </div>
+          <div class="d-none d-lg-inline-block">
+              <a href="https://themeselection.com/license/" class="footer-link me-4"
+                  target="_blank">License</a>
+              <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More
+                  Themes</a>
+
+              <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
+                  target="_blank" class="footer-link me-4">Documentation</a>
+
+              <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                  target="_blank" class="footer-link">Support</a>
+          </div>
+      </div>
+  </footer>
+  <!-- / Footer -->
+
+  <div class="content-backdrop fade"></div>
+</div>
+<!-- Content wrapper -->
+</ion-content>

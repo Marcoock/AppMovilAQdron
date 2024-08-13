@@ -3,7 +3,12 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>records</ion-title>
+    <ion-title>Registros</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" shape="round" size="large">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -25,14 +30,46 @@
       <div class="container-xxl flex-grow-1 container-p-y">
 
 
-        <h4 class="py-3 mb-4">
+        <h4 class="mb-4">
           <span class="text-muted fw-light">Clientes/</span> Registros optenidos</h4>
 
         <!-- Basic Bootstrap Table -->
         <div class="card">
           <div class="table-responsive text-nowrap" style="margin: 1rem;">
             
-            <table class="table">
+            <ion-list *ngFor="let registro of registros">
+              <ion-item-sliding>
+          
+                <ion-item>
+                <ion-avatar slot="start">
+                  <div class="avatar">
+                    {{ "Yanga,Ver.".substring(0, 1).toUpperCase() }}
+                  </div>
+                </ion-avatar>
+                <ion-label>
+                  <h3 class="title">Yanga,Ver.</h3>
+                  <p class="subtext">
+                    {{ registro.date }}
+                  </p>
+                  <p class="subtext">
+                    {{ registro.cantidad_registros }} Registros
+                  </p>
+                </ion-label>
+              </ion-item>
+          
+              <ion-item-options side="end">
+                <!-- <ion-item-option color="danger" (click)="borrarAlumno(alumno.id)">
+                  <ion-icon name="trash"></ion-icon>
+                </ion-item-option> -->
+                <ion-item-option class="new" (click)="descargarCSV(registro.date)">
+                  <ion-icon class="color" name="download-outline"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+          
+              </ion-item-sliding>
+          
+            </ion-list>
+            <!-- <table class="table">
               <thead>
                 <tr>
                   <th>Lugar</th>
@@ -67,13 +104,14 @@
                   <td>
                     <div style="margin-left: .5rem;">
                       <i class="menu-icon tf-icons bx bx-download" (click)="descargarCSV(registro.date)"></i>
-                      <!-- <i class="menu-icon tf-icons bx bx-show-alt"></i> -->
+                      <i class="menu-icon tf-icons bx bx-show-alt"></i>
                     </div>
                   </td>
                 </tr>
                 
               </tbody>
-            </table>
+            </table> -->
+            
           </div>
         </div>
         

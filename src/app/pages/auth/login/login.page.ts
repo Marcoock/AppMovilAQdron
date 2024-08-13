@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { DataService } from 'src/app/sevices/data.service';
@@ -14,6 +14,7 @@ declare function Active([]): any;
 })
 export class LoginPage implements OnInit {
 
+
   constructor(
     private http: HttpClient,
     private autenticacion: DataService,
@@ -24,6 +25,7 @@ export class LoginPage implements OnInit {
     setTimeout(() => {
       Active($);
     }, 50);
+    
   }
 
   onSubmit(form: NgForm) {
